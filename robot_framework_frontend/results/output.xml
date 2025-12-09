@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.9 on win32)" generated="2025-12-08T20:07:42.669060" rpa="false" schemaversion="5">
+<suite id="s1" name="Robot Framework Frontend" source="C:\Users\Leidiana\Desktop\academy-blacklist\robot_framework_frontend">
+<suite id="s1-s1" name="Tests" source="C:\Users\Leidiana\Desktop\academy-blacklist\robot_framework_frontend\tests">
+<suite id="s1-s1-s1" name="Company" source="C:\Users\Leidiana\Desktop\academy-blacklist\robot_framework_frontend\tests\company">
+<suite id="s1-s1-s1-s1" name="List Companies" source="C:\Users\Leidiana\Desktop\academy-blacklist\robot_framework_frontend\tests\company\list_companies.robot">
+<test id="s1-s1-s1-s1-t1" name="Cenário 01: Listar empresas com sucesso" line="9">
+<kw name="Abrir Navegador" owner="common" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-12-08T20:07:43.291297" level="INFO">Opening browser 'Chrome' to base url 'https://blacklist.qacoders.dev.br'.</msg>
+<arg>${BASE_URL_UI}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-12-08T20:07:43.290812" elapsed="3.667903"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-12-08T20:07:46.959887" elapsed="0.095265"/>
+</kw>
+<status status="PASS" start="2025-12-08T20:07:43.289417" elapsed="3.766103"/>
+</kw>
+<kw name="Realizar Login" owner="login">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:email</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-12-08T20:07:47.059668" elapsed="0.709442"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-12-08T20:07:47.771599" level="INFO">Typing text 'blacklist@qa.com' into text field 'id:email'.</msg>
+<arg>id:email</arg>
+<arg>${FRONTEND_EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-08T20:07:47.770280" elapsed="0.657867"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:password</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-12-08T20:07:48.428891" elapsed="0.077440"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-12-08T20:07:48.508782" level="INFO">Typing text '1234@Test' into text field 'id:password'.</msg>
+<arg>id:password</arg>
+<arg>${FRONTEND_PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-08T20:07:48.507349" elapsed="0.413969"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:login</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-12-08T20:07:48.924526" elapsed="0.074753"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-12-08T20:07:49.001528" level="INFO">Clicking button 'id:login'.</msg>
+<arg>id:login</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-08T20:07:48.999827" elapsed="0.346079"/>
+</kw>
+<status status="PASS" start="2025-12-08T20:07:47.056996" elapsed="2.289509"/>
+</kw>
+<kw name="Verificar Redirecionamento Para Home" owner="login">
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${BASE_URL_UI}/home</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-12-08T20:07:49.349558" elapsed="2.417793"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2025-12-08T20:07:51.775776" level="INFO">Current location is 'https://blacklist.qacoders.dev.br/home'.</msg>
+<arg>${BASE_URL_UI}/home</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2025-12-08T20:07:51.768040" elapsed="0.008328"/>
+</kw>
+<status status="PASS" start="2025-12-08T20:07:49.348199" elapsed="2.428643"/>
+</kw>
+<kw name="Verificar Elemento Cadastros Visivel" owner="login">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:Cadastros</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-12-08T20:07:51.779514" elapsed="0.074411"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-12-08T20:07:51.854915" level="INFO">Verifying element 'id:Cadastros' contains exact text 'Cadastros'.</msg>
+<arg>id:Cadastros</arg>
+<arg>Cadastros</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2025-12-08T20:07:51.854392" elapsed="0.051135"/>
+</kw>
+<status status="PASS" start="2025-12-08T20:07:51.778242" elapsed="0.127878"/>
+</kw>
+<kw name="Acessar Página Empresas" owner="list_companies">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-12-08T20:07:51.908188" level="INFO">Clicking element 'id:Cadastros'.</msg>
+<arg>id:Cadastros</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-08T20:07:51.907628" elapsed="0.300380"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:Empresas</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-12-08T20:07:52.208844" elapsed="0.064116"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-12-08T20:07:52.275097" level="INFO">Clicking element 'id:Empresas'.</msg>
+<arg>id:Empresas</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-08T20:07:52.273866" elapsed="0.211742"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath://h1[text()='Empresas']</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-12-08T20:07:52.486398" elapsed="0.800222"/>
+</kw>
+<status status="PASS" start="2025-12-08T20:07:51.907017" elapsed="1.380042"/>
+</kw>
+<kw name="Verificar Listagem Carregada" owner="list_companies">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath://th[normalize-space()='Nome']</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-12-08T20:07:53.289423" elapsed="0.691712"/>
+</kw>
+<status status="PASS" start="2025-12-08T20:07:53.288244" elapsed="0.693109"/>
+</kw>
+<kw name="Fechar Navegador" owner="common" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-12-08T20:07:53.983725" elapsed="2.290862"/>
+</kw>
+<status status="PASS" start="2025-12-08T20:07:53.982217" elapsed="2.292539"/>
+</kw>
+<status status="PASS" start="2025-12-08T20:07:43.284480" elapsed="12.990578"/>
+</test>
+<status status="PASS" start="2025-12-08T20:07:42.719001" elapsed="13.566561"/>
+</suite>
+<status status="PASS" start="2025-12-08T20:07:42.714855" elapsed="13.579635"/>
+</suite>
+<status status="PASS" start="2025-12-08T20:07:42.710056" elapsed="13.591971"/>
+</suite>
+<status status="PASS" start="2025-12-08T20:07:42.675858" elapsed="13.632393"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Robot Framework Frontend" id="s1" pass="1" fail="0" skip="0">Robot Framework Frontend</stat>
+<stat name="Tests" id="s1-s1" pass="1" fail="0" skip="0">Robot Framework Frontend.Tests</stat>
+<stat name="Company" id="s1-s1-s1" pass="1" fail="0" skip="0">Robot Framework Frontend.Tests.Company</stat>
+<stat name="List Companies" id="s1-s1-s1-s1" pass="1" fail="0" skip="0">Robot Framework Frontend.Tests.Company.List Companies</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
